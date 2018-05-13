@@ -15,13 +15,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    @IBAction func unwindFromSkillWC(unwindSegue: UIStoryboardSegue){
+    @IBAction func unwindFromLeagueWC(unwindSegue: UIStoryboardSegue){
         
     }
 
-    @IBAction func unwindFromFinalWC(unwindSegue: UIStoryboardSegue){
-        
-    }
+   
     
 }
 
