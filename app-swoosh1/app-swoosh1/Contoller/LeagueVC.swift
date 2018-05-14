@@ -21,9 +21,16 @@ class LeagueVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
     @IBAction func unwindFromSkillWC(unwindSegue: UIStoryboardSegue){
         
     }
+    
+    // On Click of Next - Perform Segue action and open up the SkillVC.
+    @IBAction func onNextTapped(_ sender: Any) {
+        performSegue(withIdentifier: "skillVCSegue", sender: self)
+    }
+    
     /*
     // MARK: - Navigation
 
