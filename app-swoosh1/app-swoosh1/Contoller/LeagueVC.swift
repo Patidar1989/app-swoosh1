@@ -9,9 +9,14 @@
 import UIKit
 
 class LeagueVC: UIViewController {
-
+    
+    var player: Player!
+    
+    @IBOutlet weak var nextBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        player = Player()
 
         // Do any additional setup after loading the view.
     }
@@ -27,8 +32,29 @@ class LeagueVC: UIViewController {
     }
     
     // On Click of Next - Perform Segue action and open up the SkillVC.
+    // Programatic way of doing Segue
     @IBAction func onNextTapped(_ sender: Any) {
         performSegue(withIdentifier: "skillVCSegue", sender: self)
+    }
+    
+    @IBAction func onMensTapped(_ sender: Any) {
+        selectLeague(leagueType: "Mens")
+    }
+    
+    
+    @IBAction func onWomensTapped(_ sender: Any) {
+        selectLeague(leagueType: "Womens")
+    }
+    
+    @IBAction func onCoedTapped(_ sender: Any) {
+        selectLeague(leagueType: "Coed")
+    }
+    
+    func selectLeague(leagueType:String)
+    {
+        player.desiredLeague = leagueType
+        nextBtn.isEnabled = true
+        
     }
     
     /*
